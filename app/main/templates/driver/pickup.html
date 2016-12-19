@@ -1,0 +1,48 @@
+<!--
+  This template loads for the 'pickup' state (app.js)
+  Show job information and customer contact
+  job is a $scope variable in PickupCtrl (controllers.js)
+-->
+<ion-view view-title="Pickup">
+  <ion-content scroll="false" class="pickup-content  dark-bg">
+    <div class="padding light-bg">
+
+      <span class="badge badge-balanced">{{ job.payment_method }}</span>
+
+      <div class="item item-icon-left rounded balanced-bg margin-top light">
+        <i class="icon ion-ios-location-outline"></i>
+        <div>
+          <h4 class="light">{{ job.from.title }}</h4>
+          <span>{{ job.from.address }}</span>
+        </div>
+      </div>
+
+      <div class="item item-icon-left no-border rounded margin-top">
+        <i class="icon ion-ios-flag-outline"></i>
+        <div>
+          <h4>{{ job.to.title }}</h4>
+          <span>{{ job.to.address }}</span>
+        </div>
+      </div>
+
+
+      <div class="item item-icon-left rounded balanced-bg margin-top light">
+        <i class="icon ion-android-call"></i>
+        <div>
+          <h4 class="light">{{ job.customer.name }}</h4>
+          <span>{{ job.customer.phone }}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-buttons row">
+      <div class="col">
+        <button class="button button-block">I'M HERE</button>
+      </div>
+      <div class="col">
+        <button class="button button-block button-balanced" ng-click="pickup()">PICK UP</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

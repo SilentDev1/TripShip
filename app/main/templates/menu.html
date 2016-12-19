@@ -1,0 +1,79 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <!-- CONTENT -->
+  <ion-side-menu-content>
+
+    <!-- header bar -->
+    <!-- the nav bar will be updated as we navigate between views -->
+    <ion-nav-bar class="bar-balanced">
+      <!-- back button, shown if applicable -->
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <!-- nav button, shown if applicable -->
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+        <!-- To switch to driver mode, will need to check if user is an approved driver -->
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-model-s" ui-sref="app.home">
+        </button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <!-- ROUTING INJECTED HERE: pageContent -->
+    <ion-nav-view name="pageContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <!-- SIDEMENU -->
+  <ion-side-menu side="left">
+
+    <!-- menu content -->
+    <ion-content>
+      <!-- User profile -->
+        <div class="balanced-bg text-center padding" ng-show="user">
+          <a ui-sref="main.profile">
+            <img class="profile-picture circle" menu-close="" src="../main/img/thumb/hung.jpg">
+            <span ng-controller="AuthCtrl">
+                <h5 class="light" ng-show="firebaseUser">{{ firebaseUser.displayName }}</h5>
+            </span>
+          </a>
+        </div>
+
+      <ion-list>
+        <ion-item menu-close ng-show="user" ui-sref="main.profile">
+          <i class="icon ion-person"></i>
+          Profile
+        </ion-item>
+        <ion-item menu-close ng-show="user" ui-sref="main.notification">
+          <i class="icon ion-android-notifications"></i>
+          Notification
+        </ion-item>
+        <ion-item menu-close ng-show="user" ui-sref="main.history">
+          <i class="icon ion-android-time"></i>
+          History
+        </ion-item>
+        <ion-item menu-close ng-show="user" ui-sref="main.home">
+          <i class="icon ion-cube"></i>
+          Book
+        </ion-item>
+        <ion-item menu-close ng-show="user" ui-sref="support">
+          <i class="icon ion-help"></i>
+          Support
+        </ion-item>
+        <!-- Will need logout here instead -->
+        <ion-item menu-close ng-show="user" ui-sref="main.auth">
+          <i class="icon ion-log-out"></i>
+          Logout
+        </ion-item>
+        <ion-item menu-close ng-hide="user" ui-sref="main.auth">
+          Login
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-side-menu>
+
+</ion-side-menus>

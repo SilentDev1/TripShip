@@ -1,0 +1,60 @@
+<ion-view view-title="Login" hide-nav-bar="true" class="login-bg">
+  <!-- do you want padding? -->
+  <!-- show this always if the user is not logged in and style this (looking at you hung) -->
+  <ion-content class="login-bg">
+  <div class="login-content">
+  <div ng-controller="AuthCtrl">
+    <div ng-show="firebaseUser">
+      <p>Hello, {{ firebaseUser.displayName }}</p>
+      <button ng-click="auth.$signOut()">Sign Out</button>
+    </div>
+
+  <!--Main login Not sure what to do with the above code  -->
+<div ng-hide="firebaseUser">
+  <!-- Logo -->
+  <div class="padding text-center">
+          <div class="logo">
+            <img class="icon2" src="../main/img/icon2.png"></i>
+          </div>
+          <h2 class="light">
+            TripShip
+          </h2>
+          <p class="light">Make Money on Every Trip</p>
+        </div>
+<div ng-controller="AuthCtrl">
+        <div class="bottom-content row">
+     <div class="col col-bottom">
+         <button class="google-sign-in button button-block" ng-click="auth.$signInWithPopup('google')">Sign In With Google</button>
+       <div class="row split-actions">
+         <div class="col">
+           <!-- <a class="facebook-sign-in button button-block" ng-click="facebookSignIn()"> -->
+           <a class="facebook-sign-in button button-block" ui-sref="home">
+             Facebook
+           </a>
+         </div>
+         <div class="col">
+           <!-- <a class="twitter-sign-in button button-block" ng-click="twitterSignIn()"> -->
+           <a class="twitter-sign-in button button-block" ui-sref="home">
+             Twitter
+           </a>
+         </div>
+       </div>
+
+      <!-- Create with email / Forgot Password -->
+      <div class="row">
+
+        <div class="col text-left" >
+          <a ui-sref="main.login" class="light">Login with Email</a>
+        </div>
+        <div class="col text-right">
+          <a ui-sref="main.register" class="light">Create Account</a>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+
+  </ion-content>
+</ion-view>

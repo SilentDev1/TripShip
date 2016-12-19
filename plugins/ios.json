@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.tripship.main"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.tripship.main"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.tripship.main"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.tripship.main"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.tripship.main"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.tripship.main"
+        }
+    },
+    "dependent_plugins": {}
+}

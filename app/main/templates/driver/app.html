@@ -1,0 +1,83 @@
+<ion-side-menus>
+
+  <!-- Center content -->
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced" align-title="center">
+      <!-- Back button -->
+      <ion-nav-back-button>
+        Back
+      </ion-nav-back-button>
+
+      <!-- Burger button -->
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-box" ui-sref="main.home">
+        </button>
+      </ion-nav-buttons>
+
+
+    </ion-nav-bar>
+
+    <!-- Main view content -->
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <!-- Left menu -->
+  <ion-side-menu side="left">
+    <ion-content>
+
+      <!-- User profile -->
+      <div class="balanced-bg text-center padding" >
+        <a ui-sref="main.profile">
+          <img class="profile-picture circle" menu-close="" src="../../main/img/thumb/hung.jpg">
+          <span ng-controller="AuthCtrl">
+              <h5 class="light" ng-show="firebaseUser">{{ firebaseUser.displayName }}</h5>
+          </span>
+        </a>
+      </div>
+
+      <!-- Menu -->
+    <ion-list>
+        <ion-item menu-close ui-sref="app.home">
+          <i class="icon ion-ios-home-outline"></i>
+          Home
+        </ion-item>
+
+        <ion-item menu-close ui-sref="app.wallet">
+          <i class="icon ion-ios-albums"></i>
+          Wallet
+        </ion-item>
+
+        <ion-item menu-close  ui-sref="app.job_history">
+          <i class="icon ion-android-time"></i>
+          Job history
+        </ion-item>
+
+        <ion-item menu-close ui-sref="app.setting">
+          <i class="icon ion-ios-gear"></i>
+          Setting
+        </ion-item>
+
+        <ion-item menu-close  ui-sref="support">
+          <i class="icon ion-ios-help-outline"></i>
+          Support
+        </ion-item>
+
+        <ion-item menu-close  ui-sref="main.auth">
+          <i class="icon ion-log-out"></i>
+          Logout
+        </ion-item>
+        <ion-item menu-close ng-hide="user" ui-sref="main.auth">
+          Login
+        </ion-item>
+      </ion-list>
+
+    </ion-content>
+
+  </ion-side-menu>
+
+</ion-side-menus>

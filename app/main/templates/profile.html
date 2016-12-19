@@ -1,0 +1,50 @@
+<!--
+  This template loads for the 'profile' state (main.js)
+  Show contact form
+-->
+
+<ion-view view-title="{{ profile.name }} Profile">
+  <!-- do you want padding? -->
+  <ion-content scroll="false">
+
+    <!--Profile picture-->
+  <div class="text-center user-profile balanced-bg">
+
+    <img class="profile-picture circle" menu-close="" src="../main/img/thumb/hung.jpg">
+    <!--Will want something like this
+    <img class="profile-picture circle" menu-close="" src="{{ profile.profile_picture }}">
+    -->
+  </div>
+
+  <!--Edit profile setting-->
+  <div class="list" ng-submit="saveProfile()">
+
+    <label class="item item-input item-stacked-label">
+      <span class="input-label dark">Name</span>
+      <input type="text" ng-model="profile.name">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label dark">Phone</span>
+      <input type="text" ng-model="profile.phone">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label dark">Email</span>
+      <input type="text" ng-model="profile.email">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label dark">City</span>
+      <input type="text" ng-model="profile.city">
+    </label><label class="item item-input item-stacked-label">
+      <span class="input-label dark">State</span>
+      <input type="text" ng-model="profile.state">
+    </label>
+
+
+  <!--Action buttons-->
+  <div class="padding">
+  <button class="button button-block balanced-bg" type="submit">Save Changes</button>
+  </div>
+
+  </div>
+  </ion-content>
+</ion-view>

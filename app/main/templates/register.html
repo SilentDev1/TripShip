@@ -1,0 +1,55 @@
+<!--
+  This template loads for the 'register with email' state (main.js)
+  Show contact form
+-->
+
+<ion-view view-title="Login" hide-nav-bar="true" class="login-bg">
+  <ion-content class="login-bg">
+
+    <div class="login-content">
+
+      <div class="light-bg">
+
+        <!-- Logo -->
+        <div class="padding text-center">
+          <div class="logo">
+              <img class="icon2" src="../main/img/icon2.png"></i>
+          </div>
+          <h2 class="dark">
+            TripShip
+          </h2>
+          <p class="dark">Make Money on Every Trip</p>
+        </div>
+
+        <!-- Login form -->
+        <div class="list padding">
+          <label class="item item-input">
+            <i class="ion-ios-person-outline light icon-label"></i>
+            <input type="text" placeholder="Your name">
+          </label>
+          <label class="item item-input">
+            <i class="ion-ios-email-outline light icon-label"></i>
+            <input type="email" placeholder="Email">
+          </label>
+          <label class="item item-input">
+            <i class="ion-ios-locked-outline light icon-label"></i>
+            <input type="password" placeholder="Password">
+          </label>
+        </div>
+        <div class="padding">
+          <button class="button button-block button-balanced" ui-sref="home">
+            Create account
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Other links -->
+      <div class="text-center padding">
+          <a ui-sref="main.auth" class="light">Have account? <span class="balanced">Login</span></a>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

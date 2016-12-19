@@ -1,0 +1,23 @@
+<!--
+  This template loads for the 'payment_method' state (main.js) example once we setup
+  stripe we can remove
+-->
+<ion-view view-title="Payment methods">
+
+  <ion-content class="checkout stable-bg">
+    <div class="list">
+
+      <ion-radio ng-model="choice" ng-value="'A'" ng-change="changeMethod('cash')">
+        Card 1
+        <p class="text-hint">Visa XXX71</p>
+      </ion-radio>
+
+      <ion-radio ng-model="choice" ng-value="'B'" ng-change="changeMethod('card')">
+        Card 2
+        <p class="text-hint">Master XXX71</p>
+      </ion-radio>
+
+    </div>
+
+  </ion-content>
+</ion-view>
